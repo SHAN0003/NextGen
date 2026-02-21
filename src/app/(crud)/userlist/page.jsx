@@ -19,7 +19,7 @@ function page() {
   //delete user
   const handleDelete = (id) => {
     axios
-      .delete(`http://localhost:3000/api/deleteUser/${id}`)
+      .delete(`/api/deleteUser/${id}`)
       .then((response) => {
         console.log("user deleted", response);
         setTriger((prev) => (prev += 1));
@@ -31,7 +31,7 @@ function page() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/userList")
+      .get("/api/userList")
       .then((userList) => {
         console.log("userList -->", userList);
 

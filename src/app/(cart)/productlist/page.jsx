@@ -14,7 +14,7 @@
 
 //   useEffect(() => {
 //     axios
-//       .get("http://localhost:3000/api/productlist")
+//       .get("/api/productlist")
 //       .then((res) => {
 //         setProducts(res.data);
 //         setIsLoading(false);
@@ -152,7 +152,7 @@ function Page() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/productlist")
+      .get("/api/productlist")
       .then((res) => {
         setProducts(res.data);
         setIsLoading(false);

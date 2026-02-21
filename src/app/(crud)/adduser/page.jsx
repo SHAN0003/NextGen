@@ -13,7 +13,7 @@ function page() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await axios.post("http://localhost:3000/api/addUser", {
+    const response = await axios.post("/api/addUser", {
       email,
       name,
       city,

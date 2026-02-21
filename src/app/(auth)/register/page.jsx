@@ -14,7 +14,7 @@ function Register() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3000/api/register", { email, password, name })
+      .post("/api/register", { email, password, name })
       .then((result) => {
         console.log("axios says", result);
         Swal.fire({

@@ -14,7 +14,7 @@ function page({ params }) {
 
   //fetch editing user's details to fill input fields
   useEffect(() => {
-    axios.post(`http://localhost:3000/api/updateUser/${id}`)
+    axios.post(`/api/updateUser/${id}`)
     .then((user) => {
         console.log(user.data.user.email);
         
@@ -29,7 +29,7 @@ function page({ params }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put(`http://localhost:3000/api/updateUser/${id}`, { email, name, city})
+    axios.put(`/api/updateUser/${id}`, { email, name, city})
     .then((user) => {
         console.log("updated user-->", user.data.user.email);
         

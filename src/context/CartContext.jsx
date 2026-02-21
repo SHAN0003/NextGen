@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
   // Fetch user ID
   useEffect(() => {
     axios
-      .post("http://localhost:3000/api/getlogeduser")
+      .post("/api/getlogeduser")
       .then((response) => {
         console.log("response----->", response.data);
 
